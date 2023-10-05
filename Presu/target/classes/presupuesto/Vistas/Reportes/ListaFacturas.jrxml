@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d06704e0-2707-4256-a809-809c735cf0a7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fechaInicial" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fechaFinal" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="estado" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select c.TERNUMDOC, f.gdenombre,CASE a.CXCESTCAR 
+when 0 then 'Sin Radicar' 
+when 1 then 'Radicada' 
+when 2 then 'Radicada Entidad' 
+when 3 then 'Objetada' 
+END AS ESTADO
+, a.CXCDOCUME,b.ccvalor,a.CXCDOCFECHA, e.USUDESCRI
+from dgempres01..crncxc a inner join dgempres01..CRNCXCC b on a.OID = b.crncxc 
+inner join dgempres01..gentercer c on a.gentercer = c.oid
+inner join dgempres01..SLNFACTUR d on a.CXCDOCUME = d.SFANUMFAC
+inner join dgempres01..GENUSUARIO e on d.GENUSUARIO1 = e.OID
+inner join dgempres01..gendetcon f on d.gendetcon = f.oid
+where  CXCDOCFECHA >= $P{fechaInicial} and CXCDOCFECHA <= $P{fechaFinal} and c.TERDIGITO is not null and d.SFADOCANU = 0
+and b.ccvalor+b.CCVALDEB-b.ccvalcre-CCVALTRA-ccvalabo > 0 and a.CXCESTCAR = $P{estado}]]>
+	</queryString>
+	<field name="TERNUMDOC" class="java.lang.String"/>
+	<field name="gdenombre" class="java.lang.String"/>
+	<field name="ESTADO" class="java.lang.String"/>
+	<field name="CXCDOCUME" class="java.lang.String"/>
+	<field name="ccvalor" class="java.math.BigDecimal"/>
+	<field name="CXCDOCFECHA" class="java.sql.Timestamp"/>
+	<field name="USUDESCRI" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="23" width="100" height="20" uuid="65b400ea-5fba-495e-afec-e4684baf113a"/>
+				<text><![CDATA[CODIGO TERCERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="23" width="254" height="20" uuid="2e9ca21d-62c7-4214-9340-ca366b48504d"/>
+				<text><![CDATA[NOMBRE TERCERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="23" width="100" height="20" uuid="6223457d-93b5-4e28-8f0f-f6be215c0d62"/>
+				<text><![CDATA[FACTURA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="23" width="100" height="20" uuid="67301290-d61b-46c6-9265-b94387a8d5f8"/>
+				<text><![CDATA[VALOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="554" y="23" width="112" height="20" uuid="0172e1f5-d030-4517-87d3-7563f2bcd490"/>
+				<text><![CDATA[FECHA DOCUMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="666" y="23" width="136" height="20" uuid="00db06f3-c2da-4753-8968-55eef8b0988e"/>
+				<text><![CDATA[USUARIO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="8ff8d968-8ac9-4b75-a7b0-6f4893f18627"/>
+				<textFieldExpression><![CDATA[$F{TERNUMDOC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="0" width="100" height="20" uuid="d4fb7e34-9257-4336-9a04-d35efaeb9217"/>
+				<textFieldExpression><![CDATA[$F{CXCDOCUME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="454" y="0" width="100" height="20" uuid="0e9fd91f-e6c7-4554-acf4-130f89b3ed9a"/>
+				<textFieldExpression><![CDATA[NumberFormat.getInstance().format($F{ccvalor})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="554" y="0" width="112" height="20" uuid="3c1d2d56-6670-489c-bc2c-5d0777250e18"/>
+				<textFieldExpression><![CDATA[$F{CXCDOCFECHA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="666" y="0" width="136" height="20" uuid="ad11a3cb-bb88-4a1c-890e-0ffd676bab3d"/>
+				<textFieldExpression><![CDATA[$F{USUDESCRI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="254" height="20" uuid="b4070b97-39b0-4b06-8fa9-ba5e895e8bae"/>
+				<textFieldExpression><![CDATA[$F{gdenombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
