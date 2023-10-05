@@ -65,12 +65,12 @@ public class GraficaPq {
 		dataset.setValue(this.val4, (Comparable) "Presupuesto", (Comparable) "Cx.");
 		dataset.setValue(this.val5, (Comparable) "Facturado", (Comparable) "Hosp.");
 		dataset.setValue(this.val6, (Comparable) "Presupuesto", (Comparable) "Hosp.");
-		dataset.setValue(this.val7, (Comparable) "Facturado", (Comparable) "UciN.");
-		dataset.setValue(this.val8, (Comparable) "Presupuesto", (Comparable) "UciN.");
+		dataset.setValue(this.val7, (Comparable) "Facturado", (Comparable) "Rehab.");
+		dataset.setValue(this.val8, (Comparable) "Presupuesto", (Comparable) "Rehab.");
 		dataset.setValue(this.val9, (Comparable) "Facturado", (Comparable) "UciA.");
 		dataset.setValue(this.val10, (Comparable) "Presupuesto", (Comparable) "UciA.");
-		dataset.setValue(this.val11, (Comparable) "Facturado", (Comparable) "Alto R."); //Gin.
-		dataset.setValue(this.val12, (Comparable) "Presupuesto", (Comparable) "Alto R."); //Gin.
+		dataset.setValue(this.val11, (Comparable) "Facturado", (Comparable) "Gastro."); //Gin.
+		dataset.setValue(this.val12, (Comparable) "Presupuesto", (Comparable) "Gastro."); //Gin.
 		dataset.setValue(this.val13, (Comparable) "Facturado", (Comparable) "Imag.");
 		dataset.setValue(this.val14, (Comparable) "Presupuesto", (Comparable) "Imag.");
 		dataset.setValue(this.val15, (Comparable) "Facturado", (Comparable) "ConE.");

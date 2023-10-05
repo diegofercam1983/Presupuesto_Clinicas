@@ -17,8 +17,11 @@ public class Conexion {
 
 	public Conexion() {
 		this.CONTROLADOR = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-		this.USUARIO = "DGNET";
-		this.PASS = "sj4T2rsU2Uhf8j7Pg8VJ05s";
+		//this.USUARIO = "DGNET";
+		//this.PASS = "sj4T2rsU2Uhf8j7Pg8VJ05s";
+		this.USUARIO = "DGEMPRESAL";
+		this.PASS = "CHRCPR2018!";
+		
 		this.URL = "";
 		this.connection = null;
 		this.getConexion("");
@@ -27,7 +30,8 @@ public class Conexion {
 	public Connection getConexion(final String baseDatos) {
 		try {
 			Class.forName(this.CONTROLADOR);
-			this.URL = "jdbc:sqlserver://10.24.248.17\\MSSQLFARA:1433;databaseName=";
+			//this.URL = "jdbc:sqlserver://10.24.248.17\\MSSQLFARA:1433;databaseName=";
+			this.URL = "jdbc:sqlserver://10.24.248.18\\MSSQLPALMA:4022;databaseName=";
 			this.URL += baseDatos;
 			return this.connection = DriverManager.getConnection(this.URL, this.USUARIO, this.PASS);
 		} catch (final ClassNotFoundException | SQLException ex) {

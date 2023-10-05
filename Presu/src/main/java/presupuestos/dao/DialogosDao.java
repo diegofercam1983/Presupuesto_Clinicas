@@ -35,7 +35,7 @@ public class DialogosDao {
 
 	public double consultarCirugia(final int complejidad) {
 		final String baseDatos = "Cfweb";
-		final String consulta = "select COUNT(*) AS CANT  from dgempres01..HCMWNOTAQ A inner join\ndgempres01..GENSERIPS B ON A.HCCM22N24 = B.OID INNER JOIN\ndgempres01..HCNFOLIO C ON A.HCNFOLIO = C.OID\nWHERE YEAR(C.HCFECFOL) = YEAR(GETDATE())  AND MONTH(C.HCFECFOL) = MONTH(GETDATE()) AND B.SIPCOMPLE = "
+		final String consulta = "select COUNT(*) AS CANT  from dgempres01..HCMNOTAQU A inner join\ndgempres01..GENSERIPS B ON A.HCCM22N36 = B.OID INNER JOIN\ndgempres01..HCNFOLIO C ON A.HCNFOLIO = C.OID\nWHERE YEAR(C.HCFECFOL) = YEAR(GETDATE())  AND MONTH(C.HCFECFOL) = MONTH(GETDATE()) AND B.SIPCOMPLE = "
 				+ complejidad + "\n" + "GROUP BY SIPCOMPLE\n" + "order by B.SIPCOMPLE";
 		final Conexion conexion = new Conexion();
 		double datos = 0.0;

@@ -410,7 +410,7 @@ public class Consulta extends JFrame {
 		this.jLabel11.setFont(new Font("Dialog", 1, 12));
 		this.jLabel11.setForeground(new Color(-12566464, true));
 		this.jLabel11.setHorizontalAlignment(4);
-		this.jLabel11.setText("UCI NEONATAL");
+		this.jLabel11.setText("CENTRO REHABILITACION"); //UCINEO
 		this.jLabel12.setFont(new Font("Dialog", 1, 12));
 		this.jLabel12.setForeground(new Color(-12566464, true));
 		this.jLabel12.setHorizontalAlignment(4);
@@ -418,7 +418,7 @@ public class Consulta extends JFrame {
 		this.jLabel13.setFont(new Font("Dialog", 1, 12));
 		this.jLabel13.setForeground(new Color(-12566464, true));
 		this.jLabel13.setHorizontalAlignment(4);
-		this.jLabel13.setText("ALTO RIESGO"); //GINECOBSTETRICIA
+		this.jLabel13.setText("GASTRO"); //GINECOBSTETRICIA
 		this.jLabel14.setFont(new Font("Dialog", 1, 12));
 		this.jLabel14.setForeground(new Color(-12566464, true));
 		this.jLabel14.setHorizontalAlignment(4);
@@ -714,7 +714,7 @@ public class Consulta extends JFrame {
 		this.jLabel28.setHorizontalAlignment(0);
 		this.jLabel28.setText("<html>DIFERENCIA<br/><center> MES A HOY</center></html>");
 		this.jLabel29
-				.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/ClinicaFarallones.png")));
+				.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/ClinicaPalmaReal.png")));
 		this.jButton1.setText("Corte");
 		this.jButton1.addActionListener(new ActionListener() {
 			@Override

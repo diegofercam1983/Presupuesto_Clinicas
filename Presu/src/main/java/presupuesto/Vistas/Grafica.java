@@ -67,12 +67,12 @@ public class Grafica extends JFrame {
 		dataset.setValue(this.val4, (Comparable) "Presupuesto", (Comparable) "Cirugia");
 		dataset.setValue(this.val5, (Comparable) "Facturado", (Comparable) "Hospitalización");
 		dataset.setValue(this.val6, (Comparable) "Presupuesto", (Comparable) "Hospitalización");
-		dataset.setValue(this.val7, (Comparable) "Facturado", (Comparable) "Uci Neonatal");
-		dataset.setValue(this.val8, (Comparable) "Presupuesto", (Comparable) "Uci Neonatal");
+		dataset.setValue(this.val7, (Comparable) "Facturado", (Comparable) "Rehabilitacion");
+		dataset.setValue(this.val8, (Comparable) "Presupuesto", (Comparable) "Rehabilitacion");
 		dataset.setValue(this.val9, (Comparable) "Facturado", (Comparable) "Uci Adultos");
 		dataset.setValue(this.val10, (Comparable) "Presupuesto", (Comparable) "Uci Adultos");
-		dataset.setValue(this.val11, (Comparable) "Facturado", (Comparable) "Alto Riesgo."); //Ginecoobs.
-		dataset.setValue(this.val12, (Comparable) "Presupuesto", (Comparable) "Alto Riesgo.");
+		dataset.setValue(this.val11, (Comparable) "Facturado", (Comparable) "Gastro"); //Ginecoobs.
+		dataset.setValue(this.val12, (Comparable) "Presupuesto", (Comparable) "Gastro");
 		dataset.setValue(this.val13, (Comparable) "Facturado", (Comparable) "Imagenes");
 		dataset.setValue(this.val14, (Comparable) "Presupuesto", (Comparable) "Imagenes");
 		dataset.setValue(this.val15, (Comparable) "Facturado", (Comparable) "Consulta Ext.");

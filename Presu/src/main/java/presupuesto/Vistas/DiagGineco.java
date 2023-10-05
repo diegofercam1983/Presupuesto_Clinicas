@@ -54,17 +54,17 @@ public class DiagGineco extends JDialog {
 		this.jPanel1.setBackground(new Color(204, 204, 255));
 		this.jLabel1.setFont(new Font("Tahoma", 1, 11));
 		this.jLabel1.setForeground(new Color(102, 102, 255));
-		this.jLabel1.setText("ALTO RIESGO OBSTETRICO");
+		this.jLabel1.setText("UNIDAD DE GASTROENTEROLOGIA");
 		this.jLabel2.setBackground(new Color(102, 102, 255));
 		this.jLabel2.setToolTipText("");
 		this.jLabel2.setOpaque(true);
 		this.jLabel3.setBackground(new Color(102, 102, 255));
 		this.jLabel3.setFont(new Font("Tahoma", 1, 11));
 		this.jLabel3.setForeground(new Color(102, 102, 255));
-		this.jLabel3.setText("CESAREAS");
+		this.jLabel3.setText("COLONO");
 		this.jLabel4.setFont(new Font("Tahoma", 1, 11));
 		this.jLabel4.setForeground(new Color(102, 102, 255));
-		this.jLabel4.setText("CONSULTAS DE URG.");
+		this.jLabel4.setText("CONSULTAS");
 		this.jTextField1.setEditable(false);
 		this.jTextField1.setHorizontalAlignment(0);
 		this.jTextField2.setEditable(false);
@@ -79,7 +79,7 @@ public class DiagGineco extends JDialog {
 		this.jLabel5.setBackground(new Color(102, 102, 255));
 		this.jLabel5.setFont(new Font("Tahoma", 1, 11));
 		this.jLabel5.setForeground(new Color(102, 102, 255));
-		this.jLabel5.setText("PARTOS");
+		this.jLabel5.setText("GASTRO");
 		this.jTextField3.setEditable(false);
 		this.jTextField3.setHorizontalAlignment(0);
 		final GroupLayout jPanel1Layout = new GroupLayout(this.jPanel1);
@@ -91,14 +91,14 @@ public class DiagGineco extends JDialog {
 								jPanel1Layout.createSequentialGroup().addComponent(this.jLabel5, -2, 160, -2)
 										.addGap(48, 48, 48).addComponent(this.jTextField3, -1, 100, 32767))
 						.addGroup(GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-								.addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-										.addComponent(this.jLabel4, -1, -1, 32767)
-										.addComponent(this.jLabel3, -1, 160, 32767))
+							.addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+								.addComponent(this.jLabel4, -1, -1, 32767)
+							.addComponent(this.jLabel3, -1, 160, 32767))
 								.addGap(48, 48, 48)
 								.addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-										.addComponent(this.jTextField2, -2, 100, -2)
-										.addComponent(this.jTextField1, -2, 100, -2)
-										.addComponent(this.jButton1, -2, 100, -2)))))
+									.addComponent(this.jTextField2, -2, 100, -2)
+								.addComponent(this.jTextField1, -2, 100, -2)
+									.addComponent(this.jButton1, -2, 100, -2)))))
 				.addGroup(jPanel1Layout.createSequentialGroup().addGap(10, 10, 10).addComponent(this.jLabel1, -2, 119,
 						-2))
 				.addComponent(this.jLabel2, -2, 362, -2));
